@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titel</title>
+  </head>
+  <body>
+    <h1>Wie ist das Wetter in... ?</h1>
+    <h2>Gib mir deine Location:</h2>
+    <div id="textBoxInput" name="textarea">
+     <form name="input" id="input">
+      <fieldset name="fieldset" id="fieldset">
+        <legend name="legend" id="legend">Location</legend>
+        <label name="label" id="inputBreitengrad" for="latitude">Breitengrad:</label>     
+        <input name="input" id="latitude" type="number"><br><br>
+        <label name="label" id="inputLängengrad" for="longitude">Längengrad:</label>     
+        <input name="input" id="longitude" type="number"><br><br>
+        <button name="submit" id="submit" type="button">Submit</button>
+      </fieldset>
+      </form>
+    </div>       
+    <div id="textBoxOutput" name="textarea">
+      <textarea name="textarea" id="textOutput" cols="50" rows="5" readonly ></textarea>
+    </div>
+  </body>
+  <script src="app.js">             
+</script>
+</html>
