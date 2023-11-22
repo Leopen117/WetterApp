@@ -1,0 +1,63 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+    background-image: url("static/mountains.jpg");
+    background-position: 100% 100%;
+}
+body {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: [line1] 25% [line2] 50% [line3] 25%;
+    grid-template-rows: [row1-start] 10% [row1-end] 10% [main] auto [last-line] 10%;
+}
+container {
+    padding: 3px;
+    grid-column-start: line2;
+    grid-column-end: line3;
+    grid-row-start: main;
+    background-image: url("static/mountains.jpg");
+    background-position: 50% 50%;
+    display: grid;
+    grid-template-columns: [line1] 25% [line2] 50% [line3] 25%;
+    grid-template-rows: [start] 10% [main] auto [end] 30%;
+    column-gap: 3px;
+    row-gap: 3px; 
+    border-radius: 13%;
+}
+h1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+}
+h2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+}
+#textBoxInput {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#textBoxOutput {
+    margin-top: 25%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+}
+textarea {
+    margin-top: 25%;
+    text-align: center;
+    font-size: 25px;
+}
+form {
+    margin-top: 10%;
+    font-size: 25px;
+    border-color: aliceblue;
+    border-style: double;
+}
+fieldset {
+    border-color: black;
+    border-style: double;
+}
