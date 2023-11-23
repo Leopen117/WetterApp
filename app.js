@@ -10,13 +10,13 @@ async function getTemperatureForLatLong(){
     let dataJson = await dataPromise.json();
     console.log("dataJson", dataJson);
     // Regenabfrage:
-    if(dataJson.daily.weather_code == 60 | dataJson.daily.weather_code == 61) {
+    if(dataJson.daily.weather_code[0] == 60 | dataJson.daily.weather_code[0] == 61) {
         percipitation = "Heute empfehle ich mindestens eine Regenjacke!";
         container.style.backgroundImage = "url('static/cloudy.jpg')";
-    } else if(dataJson.daily.weather_code == 62 | dataJson.daily.weather_code == 63) {
+    } else if(dataJson.daily.weather_code[0] == 62 | dataJson.daily.weather_code[0] == 63) {
         percipitation = "Heute empfehle ich dir eine Regenjacke UND einen Schirm!";
         container.style.backgroundImage = "url('static/rain.jpg')";
-    } else if(dataJson.daily.weather_code == 64 | dataJson.daily.weather_code == 65) {
+    } else if(dataJson.daily.weather_code[0] == 64 | dataJson.daily.weather_code[0] == 65) {
         percipitation = "Heute empfehle ich dir zu hause zu bleiben oder ein Boot zu nehmen!";
         container.style.backgroundImage = "url('static/lightning.jpg')";   
     } else {
